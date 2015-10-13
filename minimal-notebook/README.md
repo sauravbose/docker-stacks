@@ -14,7 +14,7 @@
 The following command starts a container with the Notebook server listening for HTTP connections on port 8888 without authentication configured.
 
 ```
-docker run -d -p 8888:8888 jupyter/minimal-notebook
+docker run -d -p 8888:8888 choptiu/minimal-notebook
 ```
 
 ## Docker Options
