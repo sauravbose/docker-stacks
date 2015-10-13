@@ -9,7 +9,7 @@ Opinionated stacks of ready-to-run Jupyter applications in Docker.
 If you're familiar with Docker, have it configured, and know exactly what you'd like to run, this one-liner should work in most cases:
 
 ```
-docker run -d -P jupyter/<your desired stack>
+docker run -d -P choptiu/<your desired stack>
 ```
 
 ## Getting Started
