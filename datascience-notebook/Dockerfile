@@ -1,6 +1,6 @@
-FROM jupyter/minimal-notebook
+FROM choptiu/minimal-notebook
 
-MAINTAINER Jupyter Project <jupyter@googlegroups.com>
+MAINTAINER Aaron J. Masino
 
 USER root
 
@@ -18,7 +18,7 @@ RUN apt-get update && \
     julia \
     libnettle4 && apt-get clean
 
-USER jovyan
+USER choptiu 
 
 # Install Python 3 packages
 RUN conda install --yes \

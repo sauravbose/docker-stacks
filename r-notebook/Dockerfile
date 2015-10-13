@@ -1,7 +1,7 @@
 # Copyright (c) Jupyter Development Team.
-FROM jupyter/minimal-notebook
+FROM choptiu/minimal-notebook
 
-MAINTAINER Jupyter Project <jupyter@googlegroups.com>
+MAINTAINER Aaron J. Masino
 
 USER root
 
@@ -13,7 +13,7 @@ RUN apt-get update && \
     gfortran \
     gcc && apt-get clean
 
-USER jovyan
+USER choptiu
 
 # R packages
 RUN conda config --add channels r

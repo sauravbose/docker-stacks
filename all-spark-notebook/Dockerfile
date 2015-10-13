@@ -1,7 +1,7 @@
 # Copyright (c) Jupyter Development Team.
-FROM jupyter/minimal-notebook
+FROM choptiu/minimal-notebook
 
-MAINTAINER Jupyter Project <jupyter@googlegroups.com>
+MAINTAINER Aaron J. Masino
 
 USER root
 
@@ -49,7 +49,7 @@ ENV R_LIBS_USER $SPARK_HOME/R/lib
 ENV PYTHONPATH $SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.8.2.1-src.zip
 ENV MESOS_NATIVE_LIBRARY /usr/local/lib/libmesos.so
 
-USER jovyan
+USER choptiu
 
 # Install Python 3 packages
 RUN conda install --yes \

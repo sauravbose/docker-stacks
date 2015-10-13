@@ -22,6 +22,8 @@ RUN conda install --yes \
     'dill=0.2*' \
     'numba=0.20*' \
     'bokeh=0.9*' \
+    'nltk=3.0*' \
+    'theano=0.7*' \
     && conda clean -yt
 
 # Install Python 2 packages
@@ -42,8 +44,14 @@ RUN conda create -p $CONDA_DIR/envs/python2 python=2.7 \
     'dill=0.2*' \
     'numba=0.20*' \
     'bokeh=0.9*' \
+    'nltk=3.0*' \
+    'theano=0.7*' \
     pyzmq \
     && conda clean -yt
+
+RUN pip install -U chainer mock nose arrow requests
+
+RUN python -m nltk.downloader all
 
 USER root
 
