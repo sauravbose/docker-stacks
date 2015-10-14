@@ -45,6 +45,8 @@ RUN conda create -p $CONDA_DIR/envs/python2 python=2.7 \
     pyzmq \
     && conda clean -yt
 
+RUN apt-get update -y & apt-get install python-qt4 -y
+
 USER root
 
 # Install Python 2 kernel spec globally to avoid permission problems when NB_UID
