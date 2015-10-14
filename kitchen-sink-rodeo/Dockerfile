@@ -15,4 +15,6 @@ RUN $CONDA_DIR/envs/python2/bin/python \
     $CONDA_DIR/envs/python2/bin/ipython \
     kernelspec install-self
 
+COPY start-rodeo.sh /usr/local/bin/
+
 CMD ["start-rodeo.sh"]
