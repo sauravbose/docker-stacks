@@ -55,6 +55,8 @@ RUN conda install --yes \
     'bokeh=0.9*' \
     'nltk=3.0*' \
     'theano=0.7*' \
+    'psycopg2=2.6*' \
+    'sqlalchemy=1.0*' \
     && conda clean -yt
 
 RUN conda install --yes -c philopon chainer
@@ -82,6 +84,8 @@ RUN conda create -p $CONDA_DIR/envs/python2 python=2.7 \
     'numba=0.20*' \
     'bokeh=0.9*' \
     'nltk=3.0*' \
+    'psycopg2=2.6*' \
+    'sqlalchemy=1.0*' \
     'theano=0.7*' \
     pyzmq \
     && conda clean -yt
