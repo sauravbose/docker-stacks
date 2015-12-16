@@ -57,6 +57,7 @@ RUN conda install --yes \
     'theano=0.7*' \
     'psycopg2=2.6*' \
     'sqlalchemy=1.0*' \
+    'pymongo=3*' \
     && conda clean -yt
 
 RUN conda install --yes -c philopon chainer
@@ -87,6 +88,7 @@ RUN conda create -p $CONDA_DIR/envs/python2 python=2.7 \
     'psycopg2=2.6*' \
     'sqlalchemy=1.0*' \
     'theano=0.7*' \
+    'pymongo=3*'\
     pyzmq \
     && conda clean -yt
 
