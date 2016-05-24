@@ -1,4 +1,4 @@
-FROM choptiu/minimal-notebook
+FROM dbhi-dsg/minimal-notebook
 
 MAINTAINER Aaron J. Masino
 

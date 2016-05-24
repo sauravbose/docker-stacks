@@ -1,5 +1,5 @@
 # Copyright (c) Jupyter Development Team.
-FROM choptiu/minimal-notebook
+FROM dbhi-dsg/minimal-notebook 
 
 MAINTAINER Aaron J. Masino
 
@@ -39,25 +39,26 @@ RUN conda install --yes \
 # Install Python 3 packages
 RUN conda install --yes \
     'ipywidgets=4.0*' \
-    'pandas=0.16*' \
-    'matplotlib=1.4*' \
-    'scipy=0.15*' \
-    'seaborn=0.6*' \
-    'scikit-learn=0.16*' \
-    'scikit-image=0.11*' \
-    'sympy=0.7*' \
-    'cython=0.22*' \
-    'patsy=0.3*' \
+    'pandas=0.18*' \
+    'matplotlib=1.5*' \
+    'scipy=0.17*' \
+    'seaborn=0.7*' \
+    'scikit-learn=0.17*' \
+    'scikit-image=0.12*' \
+    'sympy=1.0*' \
+    'cython=0.23*' \
+    'patsy=0.4*' \
     'statsmodels=0.6*' \
     'cloudpickle=0.1*' \
     'dill=0.2*' \
-    'numba=0.20*' \
-    'bokeh=0.9*' \
-    'nltk=3.0*' \
+    'numba=0.24*' \
+    'bokeh=0.11*' \
+    'nltk=3.2*' \
     'theano=0.7*' \
     'psycopg2=2.6*' \
     'sqlalchemy=1.0*' \
     'pymongo=3*' \
+    'gensim=0.12*' \
     && conda clean -yt
 
 RUN conda install --yes -c philopon chainer
@@ -70,25 +71,26 @@ RUN conda clean -yt
 RUN conda create -p $CONDA_DIR/envs/python2 python=2.7 \
     'ipython=4.0*' \
     'ipywidgets=4.0*' \
-    'pandas=0.16*' \
-    'matplotlib=1.4*' \
-    'scipy=0.15*' \
-    'seaborn=0.6*' \
-    'scikit-learn=0.16*' \
-    'scikit-image=0.11*' \
-    'sympy=0.7*' \
-    'cython=0.22*' \
-    'patsy=0.3*' \
+    'pandas=0.18*' \
+    'matplotlib=1.5*' \
+    'scipy=0.17*' \
+    'seaborn=0.7*' \
+    'scikit-learn=0.17*' \
+    'scikit-image=0.12*' \
+    'sympy=1.0*' \
+    'cython=0.23*' \
+    'patsy=0.4*' \
     'statsmodels=0.6*' \
     'cloudpickle=0.1*' \
     'dill=0.2*' \
-    'numba=0.20*' \
-    'bokeh=0.9*' \
-    'nltk=3.0*' \
+    'numba=0.24*' \
+    'bokeh=0.11*' \
+    'nltk=3.2*' \
     'psycopg2=2.6*' \
     'sqlalchemy=1.0*' \
     'theano=0.7*' \
     'pymongo=3*'\
+    'gensim=0.12*' \
     pyzmq \
     && conda clean -yt
 

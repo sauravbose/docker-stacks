@@ -1,5 +1,5 @@
 # Copyright (c) Jupyter Development Team.
-FROM choptiu/kitchen-sink-notebook
+FROM dbhi-dsg/minimal-notebook
 
 MAINTAINER Aaron J. Masino
 
